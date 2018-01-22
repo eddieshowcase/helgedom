@@ -80,3 +80,46 @@
 // Templates
 @import "templates/front";
 @import "templates/kitchen-sink";
+
+// HELGEDOM...
+// This file orders components using a convention called ITCSS (Inverted Triangle CSS)
+// Essentially grouping styling by specificity (starting from broad to specific)
+
+// Organized in these categories :
+/*    _______________
+ *    \_____________/ 1.  Settings
+ *     \___________/ 2.  Tools
+ *      \_________/ 3.  Generic
+ *       \_______/ 4.  Base
+ *        \_____/ 5.  Objects
+ *         \___/ 6.  Components
+ *          \_/ 7.  Trumps
+ */
+
+/* ------------------------------------------- */
+// 1. Settings (variables, brand colors, etc.)
+/* ------------------------------------------- */
+
+/* ------------------------------------------- */
+// 2. Tools (helper functions / public mixins)
+/* ------------------------------------------- */
+
+/* ------------------------------------------- */
+// 6. Components (Designed pieces of UI, only classes,
+// more explicit naming : .products-list {})
+/* ------------------------------------------- */
+
+/* ------------------------------------------- */
+// 7. Trumps (overrides, helpers, utilities, only affect one piece of the DOM at a time,
+// usually carries !important-type items)
+/* ------------------------------------------- */
+@import "helgedom/utils.vars";
+@import "helgedom/utils.spacing";
+@import "helgedom/utils.borders";
+//@import "helgedom/utils.misc";
+
+// HELGEDOM styles
+@import "helgedom/helgedom";
+// Google Fonts
+//@import url(http://fonts.googleapis.com/css?family=Libre+Franklin:400italic,700italic,400,700,800|Robot|Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+@import url('https://fonts.googleapis.com/css?family=Bitter:400,400i,700');

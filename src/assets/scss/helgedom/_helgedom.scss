@@ -1,0 +1,40 @@
+
+$root_dev: "//localhost:3000/randomseeds/";
+$root_prod: "http://randomseeds.com/";
+$myroot: $root_prod;
+
+// HELGEDOM start fresh...
+
+.round-corners {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.round-top-corners {
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.round-bottom-corners {
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+@include breakpoint(small only) {
+
+}
+
+@include breakpoint(medium only) {
+
+}
+
+@include breakpoint(medium up) {
+  
+}
