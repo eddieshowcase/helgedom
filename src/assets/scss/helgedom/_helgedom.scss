@@ -3,8 +3,68 @@ $root_dev: "//localhost:3000/randomseeds/";
 $root_prod: "http://randomseeds.com/";
 $myroot: $root_prod;
 
-// HELGEDOM start fresh...
+.site-desktop-title {
+  font-family: "Bitter";
+}
+.site-mobile-title {
+  font-family: "Bitter";
+}
 
+// desktop title
+.top-bar .top-bar-title a {
+  font-size: 2.2rem;
+  color: #fff;
+}
+
+// mobile title
+.title-bar-title a {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.top-bar-title {
+  margin: 0 1rem 0 0;
+}
+
+.mysidebar {
+  width: 260px !important;
+}
+
+.mysidebar h1, h2, h3, h4, h5, h6 {
+  font-style: italic;
+}
+
+.menu {
+  font-weight: bold;
+}
+
+.card-header {
+  @extend .card-section;
+  background-color: #2C3840;
+  color: #fff;
+}
+
+.card-header a {
+  color: #fff;
+}
+
+.card-header .entry-title {
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+
+.image-circle-crop {
+  height: auto;
+  width: 100%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #666;
+}
+
+////////////////
 .round-corners {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -36,5 +96,5 @@ $myroot: $root_prod;
 }
 
 @include breakpoint(medium up) {
-  
+
 }
