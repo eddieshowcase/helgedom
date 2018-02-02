@@ -36,7 +36,7 @@
 		</div>
 
 <!--		DESKTOP-->
-		<nav class="site-navigation top-bar" role="navigation">
+		<nav class="site-navigation top-bar hide" role="navigation">
 			<div class="top-bar-left">
 				<div class="site-desktop-title top-bar-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>

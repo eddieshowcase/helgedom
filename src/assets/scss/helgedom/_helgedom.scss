@@ -1,57 +1,137 @@
+@import '../settings';
 
 $root_dev: "//localhost:3000/randomseeds/";
 $root_prod: "http://randomseeds.com/";
 $myroot: $root_prod;
 
-.site-desktop-title {
+$myblack: #262626;
+
+.site-logo .site-desktop-title {
   font-family: "Bitter";
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-top: -6px;
 }
+
+.site-logo a { color: $myblack; }
+
+.site-desktop-tag {
+  font-family: "Bitter";
+  font-size: 1.2rem;
+}
+
+// top-bar desktop title and link
+.site-desktop-title a {
+  font-family: "Bitter";
+  font-weight: 700;
+}
+
+.top-bar .top-bar-title a {
+  font-size: 2.2rem;
+  color: $white;
+}
+
+// top-bar mobile title and link
 .site-mobile-title {
   font-family: "Bitter";
 }
 
-// desktop title
-.top-bar .top-bar-title a {
-  font-size: 2.2rem;
-  color: #fff;
-}
-
-// mobile title
 .title-bar-title a {
   font-size: 1.5rem;
-  color: #fff;
+  color: $white;
 }
 
 .top-bar-title {
   margin: 0 1rem 0 0;
 }
 
+// mysidebar
 .mysidebar {
-  width: 260px !important;
-}
-
-.mysidebar h1, h2, h3, h4, h5, h6 {
-  font-style: italic;
+  background-color: $white;
+  min-width: 285px;
+  border-right: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
 }
 
 .menu {
   font-weight: bold;
 }
 
+.mysidebar .menu li:hover {
+  //border-top: 1px solid #e6e6e6;
+  background-color: $light-gray;
+}
+
+//.mysidebar .menu li:last-child {
+//  border-bottom: 1px solid #e6e6e6;
+//}
+
+#searchform .button {
+  color: $myblack;
+  background-color: $white;
+  border: 1px solid $medium-gray;
+  border-left: 0;
+}
+
+#searchform .button:hover {
+  background-color: $light-gray;
+}
+
+// cards
 .card-header {
   @extend .card-section;
-  background-color: #2C3840;
-  color: #fff;
+  background-color: $white;
+  color: $myblack;
 }
 
 .card-header a {
-  color: #fff;
+  color: $myblack;
 }
 
 .card-header .entry-title {
+  font-size: 14px;
+  font-weight: bold;
+  //line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.card-header .entry-meta {
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
   line-height: 1.1;
   margin-bottom: 0;
 }
+
+/////// GridBlock card a:hover highlight
+.my-main-container .card:hover .card-header {
+  color: $primary-color;
+}
+
+.my-main-container a:hover img, .my-main-container a:focus img {
+  opacity: 0.7;
+}
+
+.my-main-container a img {
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.my-main-container a {
+  color: $myblack;
+}
+
+.my-main-container a:hover {
+  color: $secondary-color;
+}
+/////// END GridBlock card a:hover highlight
+
+//// hack..
+//.card-section {
+//  border-color: #e6e6e6;
+//}
 
 .image-circle-crop {
   height: auto;
@@ -62,6 +142,10 @@ $myroot: $root_prod;
   -o-border-radius: 50%;
   border-radius: 50%;
   border: 1px solid #666;
+}
+
+.footer-container {
+  max-width: 100%;
 }
 
 ////////////////

@@ -1,0 +1,67 @@
+
+<?php
+/**
+ * MY left nav sidebar template
+ *
+ * helgedom
+ *
+ */
+
+?>
+
+<aside class="cell small-2 sidebar mysidebar hide-for-small-only pt+ pl pr">
+
+	<div class="site-logo text-center mb">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+			<div class="site-desktop-title">
+				<?php bloginfo( 'name' ); ?>
+			</div>
+			<div class="site-desktop-tag">
+				<?php bloginfo('description'); ?>
+			</div>
+		</a>
+	</div>
+
+	<div class="image-circle mb">
+		<img class="image-circle-crop" src="http://helgedom.com/images/trio_20171031_sm.jpg">
+	</div>
+
+	<!--		<div class="row text-center">-->
+	<!--			<h4>Documenting family shenanigans since 2001.</h4>-->
+	<!--		</div>-->
+
+	<!--		<div class="row mt text-center">-->
+	<!--			<i class="fa fa-fw fa-2x fa-instagram" aria-hidden="true"></i>-->
+	<!--			<i class="fa fa-fw fa-2x fa-rss" aria-hidden="true"></i>-->
+	<!--			<i class="fa fa-fw fa-2x fa-facebook-square" aria-hidden="true"></i>-->
+	<!--			<i class="fa fa-fw fa-2x fa-flickr" aria-hidden="true"></i>-->
+	<!--		</div>-->
+
+
+	<?php get_search_form(); ?>
+
+	<ul class="vertical menu">
+		<?php wp_list_pages( array( 'title_li' => '' ) ); ?>
+	</ul>
+
+	<h3>Categories</h3>
+	<ul class="vertical menu">
+		<?php wp_list_categories( array(
+			'title_li' => ''
+		) ); ?>
+	</ul>
+
+	<h3> Recent Posts </h3>
+	<ul class="vertical menu">
+		<?php
+		$recent_posts = wp_get_recent_posts();
+		foreach( $recent_posts as $recent ) {
+			printf( '<li><a href="%1$s">%2$s</a></li>',
+				esc_url( get_permalink( $recent['ID'] ) ),
+				apply_filters( 'the_title', $recent['post_title'], $recent['ID'] )
+			);
+		}
+		?>
+	</ul>
+
+</aside>

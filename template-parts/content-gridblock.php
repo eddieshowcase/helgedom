@@ -11,16 +11,15 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('card'); ?>>
+	<a href="<?php esc_url( the_permalink() ); ?>" rel="bookmark">
 	<header class="card-header">
-
-	<?php
-		if ( is_single() ) {
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		} else {
-			the_title( '<h2 class="entry-title"><i class="fa fa-instagram mr-"></i><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		}
-	?>
-		<?php foundationpress_entry_meta(); ?>
+		<div class="grid-x">
+			<div class="shrink cell"><i class="fa fa-2x fa-instagram fa-fw"></i></div>
+			<div class="auto cell">
+				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				<h2 class="entry-meta"><?php foundationpress_entry_meta(); ?></h2>
+			</div>
+		</div>
 	</header>
 	<div class="entry-content">
 		<?php
@@ -31,12 +30,10 @@
 				echo "<img src=\"$block_img\"/>";
 			} else {
 				// fall back to an auto-generated excerpt
-				echo "<div class=\"card-section\">";
+				echo "<div class=\"card-section bordert\">";
 					the_excerpt();
 				echo "</div>";
 			}
-
-
 		?>
 
 		<?php edit_post_link( __( '(Edit)', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
@@ -52,4 +49,5 @@
 		?>
 <!--		--><?php //$tag = get_the_tags(); if ( $tag ) { ?><!--<p>--><?php //the_tags(); ?><!--</p>--><?php //} ?>
 	</footer>
+	</a>
 </article>
