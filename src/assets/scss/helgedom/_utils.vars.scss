@@ -24,7 +24,7 @@ $space-margin-max: $base-space-size * 3 !default;         //  60
 // Borders
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 $base-border-size: rem-calc(1) !default;
-$base-border-color: #4A595F !default;
+$base-border-color: #e6e6e6 !default;
 
 $border-size: $base-border-size !default;
 $border-size-large: $base-border-size * 2 !default;
@@ -46,7 +46,7 @@ $z-index-high: 2000 !default;
 
 // Use this to color your border when you want it to be visible. We use this for example
 // to add line under the top-bar and to separate panel heading from its content.
-$border-color: #d3d3d3 !default;
+$border-color: #e6e6e6 !default;
 
 // Text
 // - - - - - - - - - - - - - - - - - - - - - - - - -

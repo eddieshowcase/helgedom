@@ -12,10 +12,13 @@
 
 get_header(); ?>
 
-<?php get_template_part( 'template-parts/featured-image' ); ?>
-<div class="main-container">
-	<div class="main-grid">
-		<main class="main-content">
+<!--<div class="main-container">-->
+	<div class="my-main-grid grid-x">
+
+		<?php get_template_part( 'template-parts/content', 'mysidebar' ); ?>
+
+		<main class="my-main-container cell auto p+">
+			<?php get_template_part( 'template-parts/featured-image' ); ?>
 			<?php
 			while ( have_posts() ) :
 				the_post();
@@ -26,6 +29,6 @@ get_header(); ?>
 		</main>
 		<?php get_sidebar(); ?>
 	</div>
-</div>
+<!--</div>-->
 <?php
 get_footer();

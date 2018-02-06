@@ -14,7 +14,8 @@ $myblack: #262626;
   margin-top: -6px;
 }
 
-.site-logo a { color: $myblack; }
+.site-logo a { color: $white; }
+.site-logo a:hover { color: $primary-color; }
 
 .site-desktop-tag {
   font-family: "Bitter";
@@ -48,33 +49,74 @@ $myblack: #262626;
 
 // mysidebar
 .mysidebar {
-  background-color: $white;
+  color: $white;
+  background-color: $myblack;
   min-width: 285px;
   border-right: 1px solid $light-gray;
   border-bottom: 1px solid $light-gray;
 }
 
+.mysidebar h3 {
+  //color: $primary-color;
+  font-size: 1.5rem;
+}
+
+.mobile-off-canvas-menu {
+  color: $white;
+  background-color: $myblack;
+}
+
 .menu {
-  font-weight: bold;
+  //font-weight: bold;
 }
-
-.mysidebar .menu li:hover {
-  //border-top: 1px solid #e6e6e6;
-  background-color: $light-gray;
+.menu a {
+  color: $white;
 }
-
+.menu li:hover {
+  color: $primary-color;
+  background-color: $medium-gray;
+}
+.menu li:hover a {
+  color: $primary-color;
+}
+.menu .is-active > a {
+  background-color: $dark-gray;
+}
 //.mysidebar .menu li:last-child {
 //  border-bottom: 1px solid #e6e6e6;
 //}
 
-#searchform .button {
+.mysidebar input, select {
+  border: 1px solid $myblack;
+  //background-color: $light-gray;
+}
+
+.mysidebar #searchform .button {
   color: $myblack;
-  background-color: $white;
-  border: 1px solid $medium-gray;
+  background-color: $light-gray;
+  border: 1px solid $myblack;
   border-left: 0;
 }
 
-#searchform .button:hover {
+.mysidebar #searchform .button:hover {
+  color: $primary-color;
+  background-color: $light-gray;
+}
+
+.mobile-off-canvas-menu input, select {
+  border: 1px solid $myblack;
+  //background-color: $light-gray;
+}
+
+.mobile-off-canvas-menu #searchform .button {
+  color: $myblack;
+  background-color: $light-gray;
+  border: 1px solid $myblack;
+  border-left: 0;
+}
+
+.mobile-off-canvas-menu #searchform .button:hover {
+  color: $primary-color;
   background-color: $light-gray;
 }
 
@@ -104,7 +146,20 @@ $myblack: #262626;
   margin-bottom: 0;
 }
 
+//// for excerpt top-border wordaround
+//.entry-content .card-section {
+//  border-top: 1px solid $light-gray;
+//}
+
 /////// GridBlock card a:hover highlight
+.my-main-container .card a {
+  color: $myblack;
+}
+
+.my-main-container .card:hover a {
+  color: $dark-gray;
+}
+
 .my-main-container .card:hover .card-header {
   color: $primary-color;
 }
@@ -119,19 +174,15 @@ $myblack: #262626;
   transition: opacity 0.2s;
 }
 
-.my-main-container a {
-  color: $myblack;
+.my-main-container .card .post-edit-link {
+  color: $primary-color;
 }
 
-.my-main-container a:hover {
-  color: $secondary-color;
+.my-main-container .card:hover .post-edit-link {
+  color: $primary-color;
 }
+
 /////// END GridBlock card a:hover highlight
-
-//// hack..
-//.card-section {
-//  border-color: #e6e6e6;
-//}
 
 .image-circle-crop {
   height: auto;
@@ -141,7 +192,11 @@ $myblack: #262626;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
-  border: 1px solid #666;
+  border: 1px solid $myblack;
+}
+
+#respond {
+  max-width: 650px;
 }
 
 .footer-container {
@@ -177,8 +232,28 @@ $myblack: #262626;
 
 @include breakpoint(medium only) {
 
+  // mysidebar
+  .mysidebar {
+    min-width: 235px;
+  }
+
+  .mysidebar h3 {
+    //color: $primary-color;
+    font-size: 1.2rem;
+  }
+
+  .site-logo .site-desktop-title {
+    font-size: 2.1rem;
+  }
+
+  .mysidebar .site-desktop-tag {
+    font-size: 0.98rem;
+  }
+
+  .mysidebar .menu {
+    font-size: 14px;
+  }
+
 }
 
-@include breakpoint(medium up) {
 
-}

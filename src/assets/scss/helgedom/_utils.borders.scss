@@ -21,7 +21,7 @@ Examples:
 */
 
 @mixin generate-color-classes($class-prefix, $property){
-  .#{$class-prefix}-default { #{$property}: $body-font-color !important; }
+  .#{$class-prefix}-default { #{$property}: $light-gray !important; }
   .#{$class-prefix}-primary { #{$property}: $primary-color !important; }
   .#{$class-prefix}-secondary { #{$property}: $secondary-color !important; }
   .#{$class-prefix}-alert { #{$property}: $alert-color !important; }

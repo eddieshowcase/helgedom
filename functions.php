@@ -71,7 +71,10 @@ function get_gridblock_image($size = 'full') {
 		$image_url = '';
 		ob_start();
 		ob_end_clean();
-		$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+		// .+src "match one or more"
+//		$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+		// .?src "match zero to one" (fix for flickr embeds...)
+		$output = preg_match_all('/<img.?src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
 		$image_url = $matches [1] [0];
 
 		//Defines a default image

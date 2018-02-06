@@ -11,7 +11,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header>
+	<header class="mb">
 	<?php
 		if ( is_single() ) {
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -21,7 +21,7 @@
 	?>
 		<?php foundationpress_entry_meta(); ?>
 	</header>
-	<div class="entry-content">
+	<div class="entry-content mb">
 		<?php the_content(); ?>
 		<?php edit_post_link( __( '(Edit)', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
 	</div>

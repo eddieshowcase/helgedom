@@ -16,37 +16,53 @@
  */
 
 get_header(); ?>
+<div class="my-main-grid grid-x">
 
-<div class="main-container">
-	<div class="main-grid">
-		<main class="main-content">
-		<?php if ( have_posts() ) : ?>
+	<?php get_template_part( 'template-parts/content', 'mysidebar' ); ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
-			<?php endwhile; ?>
+	<div class="my-main-container cell auto p+">
+<!--		<div class="main-grid">-->
+		  <h1 class="mb">
+				<?php  echo get_the_archive_title(); ?>
+			</h1>
 
-			<?php else : ?>
-				<?php get_template_part( 'template-parts/content', 'none' ); ?>
+			<main class="main-content">
+			<?php if ( have_posts() ) : ?>
 
-			<?php endif; // End have_posts() check. ?>
+				<div class="grid-x grid-padding-x small-up-1 medium-up-2 large-up-3">
 
-			<?php /* Display navigation to next/previous pages when applicable */ ?>
-			<?php
-			if ( function_exists( 'foundationpress_pagination' ) ) :
-				foundationpress_pagination();
-			elseif ( is_paged() ) :
-			?>
-				<nav id="post-nav">
-					<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
-					<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
-				</nav>
-			<?php endif; ?>
+				<?php /* Start the Loop */ ?>
+				<?php while ( have_posts() ) : the_post(); ?>
+					<div class="cell">
+					<?php
+					//get_template_part( 'template-parts/content', get_post_format() );
+					get_template_part( 'template-parts/content', 'gridblock' );
+					?>
+					</div>
 
-		</main>
-		<?php get_sidebar(); ?>
+				<?php endwhile; ?>
 
+				<?php else : ?>
+					<?php get_template_part( 'template-parts/content', 'none' ); ?>
+
+				<?php endif; // End have_posts() check. ?>
+				</div>
+
+				<?php /* Display navigation to next/previous pages when applicable */ ?>
+				<?php
+				if ( function_exists( 'foundationpress_pagination' ) ) :
+					foundationpress_pagination();
+				elseif ( is_paged() ) :
+				?>
+					<nav id="post-nav">
+						<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
+						<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
+					</nav>
+				<?php endif; ?>
+
+			</main>
+			<?php get_sidebar(); ?>
+<!--		</div>-->
 	</div>
 </div>
 
