@@ -58,7 +58,11 @@ $myblack: #262626;
 
 .mysidebar h3 {
   //color: $primary-color;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.title-bar {
+  background: $myblack;
 }
 
 .mobile-off-canvas-menu {
@@ -142,7 +146,7 @@ $myblack: #262626;
   font-size: 12px;
   font-weight: normal;
   font-style: normal;
-  line-height: 1.1;
+  line-height: 1.2;
   margin-bottom: 0;
 }
 
@@ -239,7 +243,7 @@ $myblack: #262626;
 
   .mysidebar h3 {
     //color: $primary-color;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .site-logo .site-desktop-title {

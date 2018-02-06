@@ -43,14 +43,14 @@
 
 	<?php get_search_form(); ?>
 
-	<h3 class="mt">Categories</h3>
+	<h3 class="mt">CATEGORIES</h3>
 	<ul class="vertical menu mb">
 		<?php wp_list_categories( array(
 			'title_li' => ''
 		) ); ?>
 	</ul>
 
-	<h3>Projects</h3>
+	<h3>PROJECTS</h3>
 	<ul class="vertical menu mb">
 		<?php wp_list_bookmarks('title_li=&categorize=0&category_name=Projects'); ?>
 	</ul>
