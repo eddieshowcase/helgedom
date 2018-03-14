@@ -34,6 +34,8 @@
 						echo "<i class=\"fa fa-2x fa-bicycle fa-fw\"></i>";
 					} else if ( has_category('Professional Geekery') ) {
 						echo "<i class=\"fa fa-2x fa-code fa-fw\"></i>";
+					} else if ( has_category('Facebook') ) {
+						echo "<i class=\"fa fa-2x fa-facebook-square fa-fw\"></i>";
 					} else {
 						echo "<i class=\"fa fa-2x fa-wordpress fa-fw\"></i>";
 					}

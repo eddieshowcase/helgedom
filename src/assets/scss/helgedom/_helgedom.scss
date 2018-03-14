@@ -53,12 +53,34 @@ $myblack: #262626;
   background-color: $myblack;
   min-width: 285px;
   border-right: 1px solid $light-gray;
-  border-bottom: 1px solid $light-gray;
-}
+  //border-bottom: 1px solid $light-gray;
 
-.mysidebar h3 {
-  //color: $primary-color;
-  font-size: 1.3rem;
+  h3 {
+    //color: $primary-color;
+    font-size: 1.3rem;
+  }
+
+  input, select {
+    border: 1px solid $myblack;
+    //background-color: $light-gray;
+  }
+
+  #searchform .button {
+    color: $myblack;
+    background-color: $light-gray;
+    border: 1px solid $myblack;
+    border-left: 0;
+  }
+
+  #searchform .button:hover {
+    color: $primary-color;
+    background-color: $light-gray;
+  }
+
+  //.mysidebar .menu li:last-child {
+  //  border-bottom: 1px solid #e6e6e6;
+  //}
+
 }
 
 .title-bar {
@@ -68,6 +90,23 @@ $myblack: #262626;
 .mobile-off-canvas-menu {
   color: $white;
   background-color: $myblack;
+
+  input, select {
+    border: 1px solid $myblack;
+    //background-color: $light-gray;
+  }
+
+  #searchform .button {
+    color: $myblack;
+    background-color: $light-gray;
+    border: 1px solid $myblack;
+    border-left: 0;
+  }
+
+  #searchform .button:hover {
+    color: $primary-color;
+    background-color: $light-gray;
+  }
 }
 
 .menu {
@@ -86,71 +125,34 @@ $myblack: #262626;
 .menu .is-active > a {
   background-color: $dark-gray;
 }
-//.mysidebar .menu li:last-child {
-//  border-bottom: 1px solid #e6e6e6;
-//}
-
-.mysidebar input, select {
-  border: 1px solid $myblack;
-  //background-color: $light-gray;
-}
-
-.mysidebar #searchform .button {
-  color: $myblack;
-  background-color: $light-gray;
-  border: 1px solid $myblack;
-  border-left: 0;
-}
-
-.mysidebar #searchform .button:hover {
-  color: $primary-color;
-  background-color: $light-gray;
-}
-
-.mobile-off-canvas-menu input, select {
-  border: 1px solid $myblack;
-  //background-color: $light-gray;
-}
-
-.mobile-off-canvas-menu #searchform .button {
-  color: $myblack;
-  background-color: $light-gray;
-  border: 1px solid $myblack;
-  border-left: 0;
-}
-
-.mobile-off-canvas-menu #searchform .button:hover {
-  color: $primary-color;
-  background-color: $light-gray;
-}
 
 // cards
 .card-header {
   @extend .card-section;
   background-color: $white;
   color: $myblack;
+
+  a {
+    color: $myblack;
+  }
+
+  .entry-title {
+    font-size: 14px;
+    font-weight: bold;
+    //line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+  .entry-meta {
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.2;
+    margin-bottom: 0;
+  }
 }
 
-.card-header a {
-  color: $myblack;
-}
-
-.card-header .entry-title {
-  font-size: 14px;
-  font-weight: bold;
-  //line-height: 1.5;
-  margin-bottom: 0;
-}
-
-.card-header .entry-meta {
-  font-size: 12px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.2;
-  margin-bottom: 0;
-}
-
-//// for excerpt top-border wordaround
+//// for excerpt top-border workaround
 //.entry-content .card-section {
 //  border-top: 1px solid $light-gray;
 //}
@@ -205,6 +207,7 @@ $myblack: #262626;
 
 .footer-container {
   max-width: 100%;
+  margin-top: 0;
 }
 
 ////////////////
