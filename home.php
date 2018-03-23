@@ -19,7 +19,7 @@ get_header(); ?>
 
 	<?php get_template_part( 'template-parts/content', 'mysidebar' ); ?>
 
-	<main class="my-main-container cell auto p+">
+	<main class="my-main-container cell auto pt+ pb+ pl- pr-">
 	<?php if ( have_posts() ) : ?>
 
 		<div class="grid-x grid-padding-x small-up-1 medium-up-2 large-up-3">
