@@ -29,19 +29,17 @@
 				<?php
 					// icons/categories: instagram, cycling, DEFAULT: wordpress/misc, work/code, facebook?
 					if ( has_category( 'Square Photos' ) ) {
-						echo "<i class=\"fa fa-2x fa-instagram fa-fw\"></i>";
-					} else if ( has_category('Cycling') ) {
-						echo "<i class=\"fa fa-2x fa-bicycle fa-fw\"></i>";
+						echo "<i class=\"fab fa-2x fa-instagram fa-fw\"></i>";
+					} else if ( has_category('Athletic Pursuits') ) {
+						echo "<i class=\"fab fa-2x fa-strava fa-fw\"></i>";
 					} else if ( has_category('Professional Geekery') ) {
-						echo "<i class=\"fa fa-2x fa-code fa-fw\"></i>";
+						echo "<i class=\"fas fa-2x fa-code fa-fw\"></i>";
 					} else if ( has_category('Facebook') ) {
-						echo "<i class=\"fa fa-2x fa-facebook-square fa-fw\"></i>";
+						echo "<i class=\"fab fa-2x fa-facebook-square fa-fw\"></i>";
 					} else {
-						echo "<i class=\"fa fa-2x fa-wordpress fa-fw\"></i>";
+						echo "<i class=\"fab fa-2x fa-wordpress-simple fa-fw\"></i>";
 					}
-
 				?>
-				<!--				<i class="fa fa-2x fa-instagram fa-fw"></i>-->
 
 			</div>
 		</div>

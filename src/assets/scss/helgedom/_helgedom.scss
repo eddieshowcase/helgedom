@@ -22,6 +22,11 @@ $myblack: #262626;
   font-size: 1.2rem;
 }
 
+// Override fontawesome sizing
+.fa-2x {
+  font-size: 1.6em;
+}
+
 // top-bar desktop title and link
 .site-desktop-title a {
   font-family: "Bitter";

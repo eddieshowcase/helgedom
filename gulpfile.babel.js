@@ -118,7 +118,7 @@ const webpack = {
     log('[webpack]', stats.toString({
       colors: true,
     }));
-    
+
     browser.reload();
   },
 

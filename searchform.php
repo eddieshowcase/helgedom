@@ -15,7 +15,7 @@
 <!--			<input type="submit" id="searchsubmit" value="--><?php //esc_attr_e( 'Search', 'foundationpress' ); ?><!--" class="button">-->
 
 			<button type="submit" id="searchsubmit" class="button" name="search_submit" value="">
-				<i class="fa fa-lg fa-search"></i>
+				<i class="fas fa-lg fa-search"></i>
 			</button>
 
 		</div>

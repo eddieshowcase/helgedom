@@ -25,7 +25,9 @@
     "responsive"
   ],
   "dependencies": {
-    "font-awesome": "^4.7.0",
+    "@fortawesome/fontawesome": "^1.1.4",
+    "@fortawesome/fontawesome-free-brands": "^5.0.8",
+    "@fortawesome/fontawesome-free-solid": "^5.0.8",
     "foundation-sites": "6.4.3",
     "jquery": "~3.0.0",
     "motion-ui": "~1.2.2",
