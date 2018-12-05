@@ -77,7 +77,7 @@ function copy() {
 // Compile Sass into CSS
 // In production, the CSS is compressed
 function sass() {
-  return gulp.src('src/assets/scss/app.scss')
+  return gulp.src(['src/assets/scss/app.scss','src/assets/scss/editor.scss'])
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       includePaths: PATHS.sass
@@ -105,7 +105,7 @@ const webpack = {
         {
           test: /.js$/,
           loader: 'babel-loader',
-          exclude: /node_modules(?!\/foundation-sites)/,
+          exclude: /node_modules(?![\\\/]foundation-sites)/,
         },
       ],
     },
@@ -161,9 +161,23 @@ gulp.task('webpack:watch', webpack.watch);
 // In production, the images are compressed
 function images() {
   return gulp.src('src/assets/images/**/*')
-    .pipe($.if(PRODUCTION, $.imagemin({
-      progressive: true
-    })))
+    .pipe($.if(PRODUCTION, $.imagemin([
+      $.imagemin.jpegtran({
+        progressive: true,
+      }),
+      $.imagemin.optipng({
+        optimizationLevel: 5,
+      }),
+			$.imagemin.gifsicle({
+        interlaced: true,
+      }),
+			$.imagemin.svgo({
+        plugins: [
+          {cleanupAttrs: true},
+          {removeComments: true},
+        ]
+      })
+		])))
     .pipe(gulp.dest(PATHS.dist + '/assets/images'));
 }
 
@@ -197,7 +211,7 @@ gulp.task('phpcbf', function () {
     standard: './codesniffer.ruleset.xml',
     warningSeverity: 0
   }))
-  .on('error', $.util.log)
+  .on('error', log)
   .pipe(gulp.dest('.'));
 });
 
@@ -229,7 +243,7 @@ function watch() {
   gulp.watch('**/*.php', reload)
     .on('change', path => log('File ' + colors.bold(colors.magenta(path)) + ' changed.'))
     .on('unlink', path => log('File ' + colors.bold(colors.magenta(path)) + ' was removed.'));
-  gulp.watch('src/assets/images/**/*', gulp.series(images, browser.reload));
+  gulp.watch('src/assets/images/**/*', gulp.series(images, reload));
 }
 
 // Build the "dist" folder by running all of the below tasks
